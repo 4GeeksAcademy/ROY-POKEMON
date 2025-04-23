@@ -19,6 +19,11 @@ export const initialStore=()=>{
 
 export default function storeReducer(store, action = {}) {
   switch(action.type){
+    case 'recarga_UnpokemonApi':
+      return{
+        ...store,
+        pokemon: action.payload
+      }
     case 'recarga_pokemonApi':
       return{
         ...store,
