@@ -2,23 +2,23 @@ export const initialStore=()=>{
   return{
     message: null,
     pokemons:null,
-    todos: [
-      {
-        id: 1,
-        title: "Make the bed",
-        background: null,
-      },
-      {
-        id: 2,
-        title: "Do my homework",
-        background: null,
-      }
-    ]
+    favoritos:[],
+    
   }
 }
 
 export default function storeReducer(store, action = {}) {
   switch(action.type){
+    case 'addFav':
+      return{
+        ...store,
+        favoritos:[...store.favoritos,action.payload]
+      }
+      case 'eliminarFavorito':
+      return{
+        ...store,
+        favoritos: store.favoritos.filter(item => item.id !== action.payload)
+      }
     case 'recarga_UnpokemonApi':
       return{
         ...store,
