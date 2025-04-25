@@ -17,3 +17,11 @@ h5  {
 
 
 }
+
+.overflow{
+height: 500px;
+width: 1000px;
+    overflow: scroll;
+    overflow-y: hidden;
+
+}

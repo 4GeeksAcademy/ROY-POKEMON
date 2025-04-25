@@ -17,7 +17,7 @@ export default function storeReducer(store, action = {}) {
       case 'eliminarFavorito':
       return{
         ...store,
-        favoritos: store.favoritos.filter(item => item.id !== action.payload)
+        favoritos: store.favoritos.filter(item => item.name !== action.payload)
       }
     case 'recarga_UnpokemonApi':
       return{
