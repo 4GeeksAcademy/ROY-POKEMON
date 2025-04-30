@@ -1,6 +1,18 @@
 
 
 const apiServices = {}
+export const peticionesdeDragonball = async () =>{
+
+    try { 
+        const resp = await fetch ('https://dragonball-api.com/api/characters')
+        const data = await resp.json()
+        return data
+        
+    } catch (error) { 
+        console.log(error)
+        
+    }
+}
 
 apiServices.getAll = async ()=>{
     try {        

@@ -3,12 +3,20 @@ export const initialStore=()=>{
     message: null,
     pokemons:null,
     favoritos:[],
+    dragonBall: [],
     
   }
 }
 
 export default function storeReducer(store, action = {}) {
   switch(action.type){
+    case 'TraerpersonajesDragonBall':
+
+      
+      return {
+        ...store,
+        dragonBall : action.payload
+      };
     case 'addFav':
       return{
         ...store,

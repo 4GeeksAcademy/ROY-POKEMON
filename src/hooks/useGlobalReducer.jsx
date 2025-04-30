@@ -17,9 +17,10 @@ export  function StoreProvider({ children }) {
    useEffect(()=>{
     apiServices.getAll().then(data=>
         dispatch({type: 'recarga_pokemonApi' , payload : data})
+        
 
      ) 
-    
+     
 
 
    },[])

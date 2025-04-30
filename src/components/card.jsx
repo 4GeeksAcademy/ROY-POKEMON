@@ -11,9 +11,9 @@ export const Card =({name, url })=>{
 let aux = url.split('/')
 let id = aux[6]
 
-// useEffect(() => {
-//   console.log(store.favoritos);
-// }, [store.favoritos]);
+ useEffect(() => {
+  console.log(store.favoritos);
+ }, [store.favoritos]);
   
 
     const addfavorito=(item)=>{

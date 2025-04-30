@@ -25,3 +25,42 @@ width: 1000px;
     overflow-y: hidden;
 
 }
+
+.Dcard-img-top {
+    width: 200px;
+    height: 400px;
+    
+   
+  }
+
+
+  .Dcard{
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/000/083/685/small/free-vector-geometric-background.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow: none;
+    font-family: 'Cinzel', serif;
+    
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    min-height: 500px;
+    position: relative;
+    
+
+  }
+.card-footer{
+  
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.Doverflow{
+    height: 800px;
+    width: 2000;
+        overflow: scroll;
+        
+    
+    }
