@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import { peticionesdeDragonball } from "../services/Api.js";
 
 
-export const Home = (name) => {
+export const Home = ({name}) => {
 
 	useEffect(() => {
 		const actualizarpersonajes = async () => {
@@ -22,18 +22,18 @@ export const Home = (name) => {
 
 	const { store, dispatch } = useGlobalReducer()
 
-	const addfavorito=(item)=>{
-      
+	const addfavorito = (item) => {
+
 		const Macheo = store.favoritos.some(fav => fav.name === item.name);
-	if (Macheo) {
-	  dispatch({ type: "eliminarFavorito", payload: item.name });
-	} else {
-	   
-		  dispatch({ type: "addFav", payload: item });
-		
+		if (Macheo) {
+			dispatch({ type: "eliminarFavorito", payload: item.name });
+		} else {
+
+			dispatch({ type: "addFav", payload: item });
+
 		}
-  
-	  };
+
+	};
 
 
 
@@ -48,7 +48,7 @@ export const Home = (name) => {
 				</a>
 				<div className="collapse" id="collapseExample">
 					<div className="card card-body d-flex justify-content-between">
-						{store.favoritos?.map((favorito, i) => <span key={i} className="d-flex justify-content-between ">x <li >{favorito.name}</li> </span>)}
+						{store.favoritos?.map((favorito, i) => <span key={i} className="d-flex justify-content-between  "  onClick={() => { addfavorito() }}>x <li >{favorito.name}</li> </span>)}
 					</div>
 				</div>
 
@@ -69,12 +69,12 @@ export const Home = (name) => {
 
 			</div>
 			<div className="bg-dark row row Doverflow  ">
-			<div className="d-flex   m-5">
-				
+				<div className="d-flex   m-5">
+
 
 
 					{store?.dragonBall.items?.map((el, index) => {
-						return <div  key={index}>
+						return <div key={index}>
 
 							<div className="card  Dcard border border-white m-5"  >
 								<img className="Dcard-img-top m-5 " src={el.image} alt={el.name} />
@@ -90,7 +90,7 @@ export const Home = (name) => {
 									<p className="text-warning">{el.affiliation}</p>
 
 								</div>
-								<button type="button" onClick={() => { addfavorito(el.name) }}  className="btn btn-outline-danger">{'♥'}</button>
+								<button type="button" onClick={() => { addfavorito(el.name) }} className="btn btn-outline-danger">{'♥'}</button>
 							</div>
 						</div>
 
