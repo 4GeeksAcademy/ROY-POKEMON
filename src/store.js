@@ -10,6 +10,11 @@ export const initialStore=()=>{
 
 export default function storeReducer(store, action = {}) {
   switch(action.type){
+    case 'recarga_UnDragon':
+      return{
+        ...store,
+        dragonBall: action.payload
+      }
     case 'TraerpersonajesDragonBall':
 
       

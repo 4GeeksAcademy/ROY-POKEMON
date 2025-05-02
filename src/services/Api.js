@@ -1,6 +1,22 @@
 
 
 const apiServices = {}
+
+apiServices.getunDragon = async (id) =>{
+
+    try {
+        const resp = await fetch ('https://dragonball-api.com/api/characters/'+id)
+        
+        if (!resp.ok) throw new Error ('error fetching data')
+            const data = await resp.json()
+        return data
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
+
 export const peticionesdeDragonball = async () =>{
 
     try { 

@@ -1,3 +1,7 @@
+body{
+  background-color:#212529 ;
+}
+
 .Tarjetaimg{
     width: 18rem;
     
@@ -46,7 +50,7 @@ width: 1000px;
     text-align: center;
     min-height: 500px;
     position: relative;
-    
+    border: none;
 
   }
 .card-footer{
@@ -63,4 +67,15 @@ width: 1000px;
         overflow: scroll;
         
     
+    }
+
+    .fondo{
+
+        background-image: url('https://static.vecteezy.com/system/resources/thumbnails/000/083/685/small/free-vector-geometric-background.jpg');
+    background-size: cover;
+    background-position: center;
+    }
+
+    .imagencita{
+        width: 720px;
     }

@@ -36,7 +36,7 @@ export const Card = ({ name, url }) => {
   return (
 
 
-    <div className="card d-flex align-items-center m-3 bg-dark" >
+    <div className="card border border-0 d-flex align-items-center m-3 bg-dark" >
       <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`} className="card-img-top Tarjetaimg " alt={name} />
       <div className="card-body">
         <h5 className="card-title text-white">{name}</h5>

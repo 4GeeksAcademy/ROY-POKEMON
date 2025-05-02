@@ -25,11 +25,11 @@ export const Details = () => {
 
 
       <div className="col-sm-8 col-md-6 col-lg-10  ">
-        <div className=" card d-flex align-items-center bg-dark" >
+        <div className=" card d-flex align-items-center bg-dark border border-0" >
           <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`} className="card-img-top w-25" alt={store.pokemon?.name} />
           <div className="card-body">
             <h3 className="card-title">{store.pokemon?.name}</h3>
-            <ul className="card-text"><h5>Habilidades : </h5>
+            <ul className="card-text text-white"><h5>Habilidades : </h5>
 
               <li> {store.pokemon?.abilities[0].ability.name}</li>
               <li>{store.pokemon?.abilities[1].ability.name}</li>
@@ -47,7 +47,7 @@ export const Details = () => {
 
                 <p className="gap-1">
 
-                  <button className="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
+                  <button className="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Detalles Pokemon</button>
 
                 </p>
                 <div className="row d-flex justify-content-between">
